@@ -1,19 +1,19 @@
 .start-panel {
     display: grid;
-grid-template-columns: 50px 200px 1fr;
-grid-gap: 5px;
+    grid-template-columns: 50px 200px 1fr;
 }
 .start-panel__icons {
     display: grid;
-grid-template-rows: 1fr repeat(5, 50px );
-gap: 5px;
+  grid-template-rows: 1fr repeat(5,  50px);
 }
 .start-panel__grid {
 display: grid;
-grid-template-areas:"OFFICE ZÁBAVA"
-                    "INTERNET ZÁBAVA";
-                    align-content: start;
 grid-gap: 5px;
+align-content: baseline;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto auto;
+grid-template-areas: "OFFICE ZABAVA"
+                    "INTERNET ZABAVA" ;
 }
 .apps--office {
 grid-area: OFFICE;
@@ -22,42 +22,50 @@ grid-area: OFFICE;
 grid-area: INTERNET;
 }
 .apps--other {
-grid-area: ZÁBAVA;
+grid-area: ZABAVA;
 }
 .apps__grid {
-    display: grid;
-    grid-template-columns: repeat(6, 50px);
-    grid-auto-rows: 50px;
-    gap: 5px;
+    grid-gap: 5px;
+   display: grid;
+   grid-template-columns: repeat(6, 50px);
+   grid-auto-rows: 50px;
+   
 }
 .app--g2x2 {
-grid-column-end: 2 span;
-grid-row-end: 2 span;
+grid-column-end: span 2;
+grid-row-end: span 2;
+
 }
 .app--g2x1 {
-grid-row-end: span 2;
+grid-column-end: span 2;
+grid-row-end: span 1;
 }
 .app--g1x2 {
-grid-column-end: 2 span;
+grid-column-end: span 1;
+grid-row-end: span 2;
 }
 .app--off-3 {
 grid-column-start: 3;
 }
 .app--off-4 {
-grid-row-start: 2;
 grid-column-start: 5;
+grid-row-start: 2;
 }
 .app--off-5 {
-grid-row-start: 1;
 grid-column-start: 5;
+grid-column-end: 7;
+grid-row-start: 1;
+grid-row-end: 2;
 }
 .app--in-3 {
 grid-column-start: 3;
+grid-column-end: 4;
 grid-row-start: 1;
+grid-row-end: 3 ;
 }
 .app--fun-2 {
-grid-row-start: 3;
 grid-column-start: 3;
+grid-row-start: 3;
 }
 .app--fun-3 {
 grid-column-start: 5;
